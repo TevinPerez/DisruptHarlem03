@@ -1,0 +1,19 @@
+<h2>STEPS:</h2>
+
+<p>When starting a new project, create a new project folder:</p>
+<ul>
+<p>Example: New Project Folder:</p>
+<li>personal_website_bio2</li>
+<li>hello_world</li>
+</ul>
+Within your project folder you will be creating your html files:
+Example: personal_website_bio2
+index.html
+denzel.html
+harry_potter.html
+Within your project folder you will also create an image folder. The image folder is usually done in three ways: "img" "images" "assets".
+Example: personal_website_bio2
+index.html
+denzel.html
+harry_potter.html
+img
