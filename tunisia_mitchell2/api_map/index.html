@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Harlem Business Alliance</h1>
+
+<h3>Non-profit for Change</h3>
+<p>HBA is a non-profit that facilitates services to Harlem community based businesses and individuals</p>
+
+<br />
+<br />
+<h2>Contact</h2>
+<p>If you would like to visit HBA, please view the map below.</p>
+
+<div id="map" style="width:70%;height:300px"></div>
+
+<script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(40.807039, -73.94649299999998), 
+    zoom: 50
+  }
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
+</body>
+</html>
