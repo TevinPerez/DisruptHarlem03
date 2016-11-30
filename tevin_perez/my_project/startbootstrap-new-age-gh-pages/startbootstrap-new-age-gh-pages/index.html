@@ -52,16 +52,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#what">What</a>
+                        <a class="page-scroll" href="#what">How</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#download">Download</a>
+                        <a class="page-scroll" href="#download">Where</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#features">Features</a>
+                        <a class="page-scroll" href="#features">What</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact">Who</a>
                     </li>
                 </ul>
             </div>
@@ -77,7 +77,7 @@
                     <div class="header-content">
                         <div class="header-content-inner">
                             <h1>WeOut! </h1>
-                            <h2>Events For Anyone and Everyone! Create, Share, And Attend Events Anywhere You Are!</h2>
+                            <h2>Events For Anyone And Everyone! Create, Share, And Attend Events Anywhere You Are!</h2>
                             <a href="#download" class="btn btn-outline btn-xl page-scroll">Let's Go!</a>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                             <div class="device">
                                 <div class="screen">
                                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                    <img src="img/demo-screen-1.jpg" class="img-responsive" alt="">
+                                    <img src="img/home.png" class="img-responsive" alt="">
                                 </div>
                                 <div class="button">
                                     <!-- You can hook the "home button" to some JavaScript events or just remove it -->
@@ -132,7 +132,7 @@
 				<img src="">
 			</td>
 			<td>
-				<p>Hit WeOut and that's it! Your map will then be populated with events based on the information you entered.</p>
+				<p>Hit PULSE and that's it! Your map will then be populated with events based on the information you entered.</p>
 			</td>
 		</tr>
 		<tr>
@@ -179,7 +179,7 @@
                             <div class="device">
                                 <div class="screen">
                                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                    <img src="img/demo-screen-1.jpg" class="img-responsive" alt=""> </div>
+                                    <img src="img/pulse2.png" class="img-responsive" alt=""> </div>
                                 <div class="button">
                                     <!-- You can hook the "home button" to some JavaScript events or just remove it -->
                                 </div>
@@ -192,14 +192,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="feature-item">
-                                    <i class="icon-screen-smartphone text-primary"></i>
+									<i class="fa fa-calendar-plus-o"></i>
                                     <h3>Event Connoisseur</h3>
                                     <p class="text-muted">Create, promote and attend events, whenever!</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="feature-item">
-                                    <i class="icon-camera text-primary"></i>
+									<i class="fa fa-bullseye"></i>
                                     <h3>Breadcrumbs</h3>
                                     <p class="text-muted">Track your steps, bookmark places youve been and chart your travelling skills!</p>
                                 </div>
@@ -208,14 +208,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="feature-item">
-                                    <i class="icon-present text-primary"></i>
+									<i class="fa fa-file-text-o"></i>
                                     <h3>Jobbortunities</h3>
                                     <p class="text-muted">Build your reputation as an avid traveller, host, attendee or all 3 and possibly start a career based on your credentials!</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="feature-item">
-                                    <i class="icon-lock-open text-primary"></i>
+									<i class="fa fa-child"></i>
                                     <h3>My TiPe!</h3>
                                     <p class="text-muted">Meet new people! With the "My TiPe" (My Tiny Person) add-on, you can create an avatar that discovers people interested in the same activities, share your experiences, and join events!</p>
                                 </div>
@@ -224,17 +224,6 @@
                     </div>
                 </div>
             </div>
-    </section>
-
-
-    <section class="cta">
-        <div class="cta-content">
-            <div class="container">
-                <h2>There's events around you<br>NOW</h2>
-                <a href="#contact" class="btn btn-outline btn-xl page-scroll">S T A R T!</a>
-            </div>
-        </div>
-        <div class="overlay"></div>
     </section>
 
     <section id="contact" class="contact bg-primary">
@@ -252,6 +241,36 @@
                 </li>
             </ul>
         </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta-content">
+            <div class="container">
+                <h2>There's events around you<br>NOW</h2>
+                <a href="#contact" class="btn btn-outline btn-xl page-scroll">S T A R T!</a>
+            </div>
+        </div>
+        <div class="overlay"></div>
+        <div id="map" style="width:100%;height:500px"></div>
+
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(40.806899,-73.946331);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 18};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+  google.maps.event.addListener(marker,'click',function() {
+    var infowindow = new google.maps.InfoWindow({
+      content:"Learn How To Code!"
+    });
+  infowindow.open(map,marker);
+  });
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
     </section>
 
     <footer>
